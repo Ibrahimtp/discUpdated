@@ -10,18 +10,20 @@ var usersRouter = require('./routes/users');
 var sessions = require('express-session')
 var app = express();
 
+const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/cmrtcforum2?retryWrites=true&w=majority";
+
 const oneDay = 20000000000;
 mongoose.connect('mongodb://localhost:27017/disc',
   {
     useNewUrlParser: true,
-   /* useFindAndModify: false,*/
+    /* useFindAndModify: false,*/
     useUnifiedTopology: true
   }
-).then(()=>{
-  console.log('connected succesfully')
-}).catch((err)=>{
-  console.log(err)
-})
+).then(()=> {
+    console.log('connected succesfully')
+  }).catch((err)=> {
+    console.log(err)
+  })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +31,9 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(cookieParser());
 app.use(sessions({
@@ -57,7 +61,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get('env') === 'development' ? err: {};
 
   // render the error page
   res.status(err.status || 500);
