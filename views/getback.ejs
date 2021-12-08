@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+   <!--   <link rel="stylesheet" href="bootstrap.min.css"> -->
+  
+  <style>
+  /*#pla th {
+    border: none;
+  } */
+  
+  h1,h3,h5{
+    display:inline;
+    display:inline;
+  }
+    
+    #in{
+      font-family: 'Caveat', cursive;
+font-family: 'Estonia', cursive;
+font-family: 'Pacifico', cursive;
+    }
+    
+    .t {
+  border: 1px solid black;
+  padding: 8px;
+  
+}
+
+pre{
+  font-family: 'Pacifico', cursive;
+}
+
+
+
+.hh{
+  border: none;
+  
+}
+
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+  margin: 3px;
+}
+
+
+.bi-diamond-fill{
+  font-size: 400px;
+}
+
+
+.rr {
+/*  width: 100px;
+  height: 100px;
+  background: red;*/
+  transition: width 2s;
+}
+
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Estonia&display=swap"> -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title></title>
+  </head>
+  <body class="bg-light">
+   
+ <div class=" container  shadow  text-center p-2 ">
+ <div class=" container-fluid   shadow  text-center p-2 mt-2 ">
+ <!--  <img src="logo.jpg" class="thumbmail  " style="margin:0px;width:150px;" > -->
+ <h3> IML </h3> <h1> DISK</h1>
+  <h5 id="in" class="pb-2">insights </h5><sup>TM</sup>
+  <h1><b> PERSONALITY SYSTEM ANALYSIS </b></h1> 
+</div>
+</div>
+<br>
+
+<div class="container mx-auto p-3 shadow">
+  <br>
+  <p class="p-2"> Thank you for your submission. We will be in touch with you again  </p>
+  
+</div>
+  
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+   <script>
+   
+   
+   
+     
+ 
+     
+     
+   </script> 
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!--  <script src="bootstrap.min.js"> </script -->
+       <script>
+      
+      var patt = /circled/;
+
+        function p(trr) {
+          
+          
+          if(trr) {
+          
+          
+          let f =   document.querySelector(`#${trr}`).getAttribute('class')
+          
+          
+          
+          if(patt.test(f)) {
+            document.querySelector(`#${trr}`).classList.remove("rounded-circle")
+            
+            document.querySelector(`#${trr}`).setAttribute('name',' ')
+            
+          
+        document.querySelector(`#${trr}`).classList.remove("border")
+          
+          document.querySelector(`#${trr}`).classList.remove("border-dark")
+          
+        document.querySelector(`#${trr}`).classList.remove("p-1") 
+        
+        document.querySelector(`#${trr}`).classList.remove("circled") 
+     /*   document.querySelector(`#${trr}`).getAttribute("name") = " " ; */
+          }
+            
+            
+          else{
+            for(i=1;i<=96;i++) {
+  checkIfSameAnsIsChoosen(`s${i}`)
+
+}  
+            
+            
+            document.querySelector(`#${trr}`).classList.add('circled')
+            
+            document.querySelector(`#${trr}`).setAttribute('name','checked')
+            
+            
+          document.querySelector(`#${trr}`).classList.add("rounded-circle")
+          
+          document.querySelector(`#${trr}`).classList.add("border")
+          
+          document.querySelector(`#${trr}`).classList.add("border-dark") 
+          
+
+          document.querySelector(`#${trr}`).classList.add("p-1") 
+          
+       /*   document.querySelector(`#${trr}`).getAttribute("name") = "checked" ; */
+        }
+        
+       
+        
+        
+          }
+        
+        }
+        
+    //    p("s1")  
+       
+       
+        
+       function  harvestScore() {
+         let md = mi = ms =mc = mst = 0 ;
+         let ld = li = ls = lc = lst = 0 ;
+         mostTotal = [] ;
+         leastTotal = [] ;
+         
+       // md  
+    smd =    document.querySelectorAll('.md') ;
+    
+    smd.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        md += 1
+      }
+    })
+    
+         // mi
+    smi =    document.querySelectorAll('.mi') ;
+    
+    smi.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        mi += 1
+      }
+    })
+    
+         // ms
+    sms =    document.querySelectorAll('.ms') ;
+    
+    sms.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        ms += 1
+      }
+    })
+    
+         // mc
+    smc =    document.querySelectorAll('.mc') ;
+    
+    smc.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        mc += 1
+      }
+    })
+    
+         // mst
+    smst =    document.querySelectorAll('.mst') ;
+    
+    smst.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        mst += 1
+      }
+    })
+    
+    
+    // Least 
+    
+           // ld  
+    sld =    document.querySelectorAll('.ld') ;
+    
+    sld.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        ld += 1
+      }
+    })
+    
+         // li
+    sli =    document.querySelectorAll('.li') ;
+    
+    sli.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        li += 1
+      }
+    })
+    
+         // ms
+    sls =    document.querySelectorAll('.ls') ;
+    
+    sls.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        ls += 1
+      }
+    })
+    
+         // lc
+    slc =    document.querySelectorAll('.lc') ;
+    
+    slc.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        lc += 1
+      }
+    })
+    
+         // lst
+    slst =    document.querySelectorAll('.lst') ;
+    
+    slst.forEach((n)=>{
+      if(n.getAttribute('name') == "checked") {
+        lst += 1
+      }
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      mostTotal.push(md,mi,ms,mc,mst)
+      leastTotal.push(ld,li,ls,lc,lst)
+    
+    alert(mostTotal)
+    alert(leastTotal)
+    
+    const labels = [
+  'D',
+  'I',
+  'S',
+  'C'
+  
+];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'MASK PUBLIC SELF',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data:/* [0, 1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16]*/mostTotal,
+  }]
+};
+
+const config = {
+  type: 'line',
+  data: data,
+  options: {
+    scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 14
+            }
+        }
+  }
+};
+
+
+
+  // === include 'setup' then 'config' above ===
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+
+
+
+    const labels2 = [
+  'D',
+  'I',
+  'S',
+  'C'
+  
+];
+const data2 = {
+  labels: labels,
+  datasets: [{
+    label: 'CORE PRIVATE SELF',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data:/* [0, 1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16]*/leastTotal,
+  }]
+};
+
+const config2 = {
+  type: 'line',
+  data: data2,
+  options: {
+    scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 14
+            }
+        }
+  }
+};
+
+
+
+  // === include 'setup' then 'config' above ===
+
+  const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+  );
+
+    
+    
+    
+    
+     
+        
+       }
+    
+    
+    
+    
+    
+    
+     function checkIfSameAnsIsChoosen (t) {
+ let   gv = document.querySelectorAll(`.${t}`)
+ 
+ if(gv[0].getAttribute('name') == "checked" && gv[1].getAttribute('name') =='checked') {
+   alert('two same detected')
+   throw Error 
+ }
+       
+     }
+     
+     
+all = document.querySelectorAll('td div ')
+
+
+i = 0 ;
+all.forEach((n)=>{
+  
+  i++
+  n.id = `d${i}` ;
+  n.setAttribute('onclick', `p('d${i}')`) 
+  n.setAttribute('style','padding:6px')
+  
+
+
+}) 
+
+
+
+
+
+
+
+  
+ /*v = document.querySelectorAll(".lc")
+ 
+ v.forEach((n)=>{
+   if(n.getAttribute('name')=='checked'){
+     alert("ome")
+   }
+ })  */
+  
+ 
+
+     
+
+        
+      </script> 
+    </body>
+</html>
