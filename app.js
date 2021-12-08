@@ -10,10 +10,10 @@ var usersRouter = require('./routes/users');
 var sessions = require('express-session')
 var app = express();
 
-const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/cmrtcforum2?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/discnew?retryWrites=true&w=majority";
 
 const oneDay = 20000000000;
-mongoose.connect('mongodb://localhost:27017/disc',
+mongoose.connect(/*'mongodb://localhost:27017/disc*/uri,
   {
     useNewUrlParser: true,
     /* useFindAndModify: false,*/
@@ -39,7 +39,7 @@ app.use(cookieParser());
 app.use(sessions({
   secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
   store: MongoStore.create({
-    mongoUrl: 'mongodb://localhost:27017/disc'
+    mongoUrl: /*'mongodb://localhost:27017/disc'*/uri
   }),
   saveUninitialized: true,
   cookie: {
