@@ -10,7 +10,8 @@ var usersRouter = require('./routes/users');
 var sessions = require('express-session')
 var app = express();
 
-const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/discnew?retryWrites=true&w=majority";
+//const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/discnew?retryWrites=true&w=majority";
+const uri = "mongodb+srv://ibrahimoyetunjiib:259qVG6vhK3cvnA7@project2023.0pye0gz.mongodb.net/discnew?retryWrites=true&w=majority"
 
 const oneDay = 20000000000;
 mongoose.connect(/*'mongodb://localhost:27017/disc*/uri,
