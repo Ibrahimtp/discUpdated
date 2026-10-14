@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,8 +11,7 @@ var usersRouter = require('./routes/users');
 var sessions = require('express-session')
 var app = express();
 
-//const uri = "mongodb+srv://Ibrahim:ib130860011@cmrtcforum.dj6tu.mongodb.net/discnew?retryWrites=true&w=majority";
-const uri = "mongodb+srv://ibrahimoyetunjiib:259qVG6vhK3cvnA7@project2023.0pye0gz.mongodb.net/discnew?retryWrites=true&w=majority"
+const uri = process.env.MONGODB_URI;
 
 const oneDay = 20000000000;
 mongoose.connect(/*'mongodb://localhost:27017/disc*/uri,
@@ -38,7 +38,7 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(cookieParser());
 app.use(sessions({
-  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+  secret: process.env.SESSION_SECRET,
   store: MongoStore.create({
     mongoUrl: /*'mongodb://localhost:27017/disc'*/uri
   }),
